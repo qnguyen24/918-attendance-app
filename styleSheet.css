@@ -1,0 +1,22 @@
+body {
+	color:red;
+	background-color:#BB70A3;
+}
+
+div.relative{
+	position:relative;
+	width:500px;
+	height:200px;
+	color:gray;
+}
+
+div.absolute{
+	position:absolute;
+	
+	right:0px;
+	top:0px;
+	
+	width:100px;
+	height:200px;
+	
+}
