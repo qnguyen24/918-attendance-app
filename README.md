@@ -6,3 +6,5 @@ Quang
 Refer a Flood 
 FTMS
 DexSphere
+
+This is after I've reinstalled
