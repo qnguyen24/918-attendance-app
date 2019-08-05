@@ -8,3 +8,4 @@ FTMS
 DexSphere
 
 This is after I've reinstalled
+I have no changed the email to mine so the changes should be registered under my name.
