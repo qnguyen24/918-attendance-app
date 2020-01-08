@@ -1,5 +1,5 @@
 """
-WSGI config for Griffon_Utility project.
+WSGI config for griffon_utility project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Griffon_Utility.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'griffon_utility.settings')
 
 application = get_wsgi_application()
