@@ -13,11 +13,12 @@ class Cadet(models.Model):
 
 class Day(models.Model):
 	date = models.DateTimeField()
+	dayName = models.CharField(max_length=128)
 	cadetsPresent = models.ManyToManyField(Cadet)
 	
 	def __str__(self):
 		#"to-string" method for a day
-		return str(self.date)
+		return self.dayName + ' ' + str(self.date.date())
 
 class Flight(models.Model):
 	name = models.CharField(max_length=25)
