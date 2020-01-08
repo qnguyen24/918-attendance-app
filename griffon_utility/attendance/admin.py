@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Cadet, Day, Flight
+
+admin.site.register(Cadet)
+admin.site.register(Day)
+admin.site.register(Flight)

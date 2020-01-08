@@ -6,8 +6,6 @@ from django.utils import timezone
 class Cadet(models.Model):
 	firstName = models.CharField(max_length=20)
 	lastName = models.CharField(max_length=50)
-	daysPresent = models.ManyToManyField('Day', blank=True)
-	flight = models.ForeignKey('Flight', on_delete=models.CASCADE, related_name='+')
 	
 	def __str__(self):
 		#"to-string" method for cadets, in a 'lastname, firstname' format
@@ -19,18 +17,17 @@ class Day(models.Model):
 	
 	def __str__(self):
 		#"to-string" method for a day
-		return self.date
+		return str(self.date)
 
 class Flight(models.Model):
 	name = models.CharField(max_length=25)
 	nickname = models.CharField(max_length=100)
 	useNickname = models.BooleanField(default=False)
 	cadets = models.ManyToManyField(Cadet, related_name='+')
-	attendancePercentage = models.FloatField(blank=True)
 	
 	def __str__(self):
 		if self.useNickname:
-			return self.nickname
+			return self.nickname + ' (' + self.name + ' flight)'
 		else:
-			return self.name
+			return self.name + ' flight'
 
